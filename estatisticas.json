@@ -1,0 +1,158 @@
+{
+  "totalPartidasRankedUnicas": 133,
+  "mapas": [
+    {
+      "mapa": "Lair",
+      "partidas": 2,
+      "vitorias": 2,
+      "winRate": 100,
+      "roundsGanhos": 7,
+      "roundsTotais": 8,
+      "roundWinRate": 87.5
+    },
+    {
+      "mapa": "Clubhouse",
+      "partidas": 12,
+      "vitorias": 9,
+      "winRate": 75,
+      "roundsGanhos": 42,
+      "roundsTotais": 75,
+      "roundWinRate": 56
+    },
+    {
+      "mapa": "Skyscraper",
+      "partidas": 7,
+      "vitorias": 5,
+      "winRate": 71.43,
+      "roundsGanhos": 22,
+      "roundsTotais": 38,
+      "roundWinRate": 57.89
+    },
+    {
+      "mapa": "Oregon",
+      "partidas": 17,
+      "vitorias": 12,
+      "winRate": 70.59,
+      "roundsGanhos": 58,
+      "roundsTotais": 98,
+      "roundWinRate": 59.18
+    },
+    {
+      "mapa": "Bank",
+      "partidas": 8,
+      "vitorias": 5,
+      "winRate": 62.5,
+      "roundsGanhos": 27,
+      "roundsTotais": 51,
+      "roundWinRate": 52.94
+    },
+    {
+      "mapa": "Nighthaven Labs",
+      "partidas": 5,
+      "vitorias": 3,
+      "winRate": 60,
+      "roundsGanhos": 17,
+      "roundsTotais": 30,
+      "roundWinRate": 56.67
+    },
+    {
+      "mapa": "Border",
+      "partidas": 7,
+      "vitorias": 4,
+      "winRate": 57.14,
+      "roundsGanhos": 24,
+      "roundsTotais": 43,
+      "roundWinRate": 55.81
+    },
+    {
+      "mapa": "Coastline",
+      "partidas": 11,
+      "vitorias": 6,
+      "winRate": 54.55,
+      "roundsGanhos": 34,
+      "roundsTotais": 68,
+      "roundWinRate": 50
+    },
+    {
+      "mapa": "Chalet",
+      "partidas": 13,
+      "vitorias": 7,
+      "winRate": 53.85,
+      "roundsGanhos": 40,
+      "roundsTotais": 72,
+      "roundWinRate": 55.56
+    },
+    {
+      "mapa": "Kafe Dostoyevsky",
+      "partidas": 14,
+      "vitorias": 7,
+      "winRate": 50,
+      "roundsGanhos": 44,
+      "roundsTotais": 86,
+      "roundWinRate": 51.16
+    },
+    {
+      "mapa": "Villa",
+      "partidas": 12,
+      "vitorias": 6,
+      "winRate": 50,
+      "roundsGanhos": 38,
+      "roundsTotais": 70,
+      "roundWinRate": 54.29
+    },
+    {
+      "mapa": "Theme Park",
+      "partidas": 4,
+      "vitorias": 2,
+      "winRate": 50,
+      "roundsGanhos": 11,
+      "roundsTotais": 25,
+      "roundWinRate": 44
+    },
+    {
+      "mapa": "Fortress",
+      "partidas": 3,
+      "vitorias": 1,
+      "winRate": 33.33,
+      "roundsGanhos": 6,
+      "roundsTotais": 16,
+      "roundWinRate": 37.5
+    },
+    {
+      "mapa": "Emerald Plains",
+      "partidas": 4,
+      "vitorias": 1,
+      "winRate": 25,
+      "roundsGanhos": 10,
+      "roundsTotais": 25,
+      "roundWinRate": 40
+    },
+    {
+      "mapa": "Consulate",
+      "partidas": 5,
+      "vitorias": 1,
+      "winRate": 20,
+      "roundsGanhos": 12,
+      "roundsTotais": 30,
+      "roundWinRate": 40
+    },
+    {
+      "mapa": "Outback",
+      "partidas": 7,
+      "vitorias": 1,
+      "winRate": 14.29,
+      "roundsGanhos": 12,
+      "roundsTotais": 39,
+      "roundWinRate": 30.77
+    },
+    {
+      "mapa": "Kanal",
+      "partidas": 2,
+      "vitorias": 0,
+      "winRate": 0,
+      "roundsGanhos": 4,
+      "roundsTotais": 13,
+      "roundWinRate": 30.77
+    }
+  ]
+}

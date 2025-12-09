@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Estatísticas - Mapas Ranked</title>
+		<style>
+			body {
+				font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial;
+				padding: 20px;
+				background: #f7f7f8;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				background: #fff;
+				box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+			}
+			th,
+			td {
+				padding: 10px;
+				border-bottom: 1px solid #eee;
+				text-align: left;
+			}
+			th {
+				cursor: pointer;
+				user-select: none;
+			}
+			th.sort-asc::after {
+				content: " ↑";
+				font-weight: 600;
+			}
+			th.sort-desc::after {
+				content: " ↓";
+				font-weight: 600;
+			}
+			.controls {
+				margin-bottom: 12px;
+			}
+			button {
+				margin-right: 8px;
+				padding: 8px 12px;
+				border-radius: 6px;
+				border: 1px solid #ddd;
+				background: #fff;
+				cursor: pointer;
+			}
+			.small {
+				font-size: 0.9rem;
+				color: #666;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Estatísticas - Mapas Ranked</h1>
+		<div class="controls">
+			<button id="sort-partidas">Ordenar por Partidas</button>
+			<button id="sort-rounds">Ordenar por Rounds Ganhos</button>
+			<button id="sort-winrate">Ordenar por Taxa de Vitória</button>
+			<span class="small">Clique no cabeçalho da tabela para alternar asc/desc.</span>
+		</div>
+
+		<table id="tabela">
+			<thead>
+				<tr>
+					<th data-key="mapa">Mapa</th>
+					<th data-key="partidas">Partidas</th>
+					<th data-key="vitorias">Vitórias</th>
+					<th data-key="winRate">Taxa de vitória (%)</th>
+					<th data-key="roundsGanhos">Rounds ganhos</th>
+					<th data-key="roundsTotais">Rounds totais</th>
+					<th data-key="roundWinRate">Taxa rounds (%)</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+
+		<script>
+			let dados = [];
+			let currentSort = { key: "winRate", dir: "desc" };
+
+			function render() {
+				const tbody = document.querySelector("#tabela tbody");
+				tbody.innerHTML = "";
+				for (const m of dados) {
+					const tr = document.createElement("tr");
+					tr.innerHTML = `
+          <td>${m.mapa}</td>
+          <td>${m.partidas}</td>
+          <td>${m.vitorias}</td>
+          <td>${m.winRate.toFixed(2)}</td>
+          <td>${m.roundsGanhos}</td>
+          <td>${m.roundsTotais}</td>
+          <td>${m.roundWinRate.toFixed(2)}</td>
+        `;
+					tbody.appendChild(tr);
+				}
+				updateHeaderMarkers();
+			}
+
+			function sortBy(key, dir) {
+				dados.sort((a, b) => {
+					if (typeof a[key] === "string") {
+						return dir === "asc" ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]);
+					}
+					return dir === "asc" ? a[key] - b[key] : b[key] - a[key];
+				});
+				currentSort = { key, dir };
+				render();
+			}
+
+			function toggleSort(key) {
+				if (currentSort.key === key) {
+					currentSort.dir = currentSort.dir === "asc" ? "desc" : "asc";
+				} else {
+					currentSort.key = key;
+					currentSort.dir = "desc";
+				}
+				sortBy(currentSort.key, currentSort.dir);
+			}
+
+			function updateHeaderMarkers() {
+				document.querySelectorAll("th").forEach((th) => {
+					th.classList.remove("sort-asc", "sort-desc");
+					const k = th.getAttribute("data-key");
+					if (k === currentSort.key) {
+						th.classList.add(currentSort.dir === "asc" ? "sort-asc" : "sort-desc");
+					}
+				});
+			}
+
+			// carregamento
+			fetch("estatisticas.json")
+				.then((r) => {
+					if (!r.ok)
+						throw new Error("Falha ao carregar estatisticas.json. Sirva via servidor http.");
+					return r.json();
+				})
+				.then((json) => {
+					dados = json.mapas || [];
+					// garantir números
+					dados = dados.map((d) => ({
+						...d,
+						partidas: Number(d.partidas || 0),
+						vitorias: Number(d.vitorias || 0),
+						winRate: Number(d.winRate || 0),
+						roundsGanhos: Number(d.roundsGanhos || 0),
+						roundsTotais: Number(d.roundsTotais || 0),
+						roundWinRate: Number(d.roundWinRate || 0),
+					}));
+					sortBy(currentSort.key, currentSort.dir);
+				})
+				.catch((err) => {
+					document.body.insertAdjacentHTML(
+						"beforeend",
+						`<p style="color:red">Erro: ${err.message}</p>`
+					);
+				});
+
+			// eventos UI
+			document
+				.getElementById("sort-partidas")
+				.addEventListener("click", () => toggleSort("partidas"));
+			document
+				.getElementById("sort-rounds")
+				.addEventListener("click", () => toggleSort("roundsGanhos"));
+			document
+				.getElementById("sort-winrate")
+				.addEventListener("click", () => toggleSort("winRate"));
+
+			document.querySelectorAll("th[data-key]").forEach((th) => {
+				th.addEventListener("click", () => toggleSort(th.getAttribute("data-key")));
+			});
+		</script>
+	</body>
+</html>

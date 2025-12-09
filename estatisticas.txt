@@ -1,0 +1,107 @@
+=== ESTATÍSTICAS DE PARTIDAS RANKED ===
+
+Total de partidas Ranked (IDs únicos): 133
+
+=== MAPAS (ordenado por taxa de vitória desc) ===
+
+Mapa: Lair
+  Partidas: 2
+  Vitórias: 2
+  Taxa de vitória: 100%
+  Rounds ganhos: 7/8 (87.5%)
+
+Mapa: Clubhouse
+  Partidas: 12
+  Vitórias: 9
+  Taxa de vitória: 75%
+  Rounds ganhos: 42/75 (56%)
+
+Mapa: Skyscraper
+  Partidas: 7
+  Vitórias: 5
+  Taxa de vitória: 71.43%
+  Rounds ganhos: 22/38 (57.89%)
+
+Mapa: Oregon
+  Partidas: 17
+  Vitórias: 12
+  Taxa de vitória: 70.59%
+  Rounds ganhos: 58/98 (59.18%)
+
+Mapa: Bank
+  Partidas: 8
+  Vitórias: 5
+  Taxa de vitória: 62.5%
+  Rounds ganhos: 27/51 (52.94%)
+
+Mapa: Nighthaven Labs
+  Partidas: 5
+  Vitórias: 3
+  Taxa de vitória: 60%
+  Rounds ganhos: 17/30 (56.67%)
+
+Mapa: Border
+  Partidas: 7
+  Vitórias: 4
+  Taxa de vitória: 57.14%
+  Rounds ganhos: 24/43 (55.81%)
+
+Mapa: Coastline
+  Partidas: 11
+  Vitórias: 6
+  Taxa de vitória: 54.55%
+  Rounds ganhos: 34/68 (50%)
+
+Mapa: Chalet
+  Partidas: 13
+  Vitórias: 7
+  Taxa de vitória: 53.85%
+  Rounds ganhos: 40/72 (55.56%)
+
+Mapa: Kafe Dostoyevsky
+  Partidas: 14
+  Vitórias: 7
+  Taxa de vitória: 50%
+  Rounds ganhos: 44/86 (51.16%)
+
+Mapa: Villa
+  Partidas: 12
+  Vitórias: 6
+  Taxa de vitória: 50%
+  Rounds ganhos: 38/70 (54.29%)
+
+Mapa: Theme Park
+  Partidas: 4
+  Vitórias: 2
+  Taxa de vitória: 50%
+  Rounds ganhos: 11/25 (44%)
+
+Mapa: Fortress
+  Partidas: 3
+  Vitórias: 1
+  Taxa de vitória: 33.33%
+  Rounds ganhos: 6/16 (37.5%)
+
+Mapa: Emerald Plains
+  Partidas: 4
+  Vitórias: 1
+  Taxa de vitória: 25%
+  Rounds ganhos: 10/25 (40%)
+
+Mapa: Consulate
+  Partidas: 5
+  Vitórias: 1
+  Taxa de vitória: 20%
+  Rounds ganhos: 12/30 (40%)
+
+Mapa: Outback
+  Partidas: 7
+  Vitórias: 1
+  Taxa de vitória: 14.29%
+  Rounds ganhos: 12/39 (30.77%)
+
+Mapa: Kanal
+  Partidas: 2
+  Vitórias: 0
+  Taxa de vitória: 0%
+  Rounds ganhos: 4/13 (30.77%)
